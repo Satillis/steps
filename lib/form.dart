@@ -12,7 +12,6 @@ class MyCustomForm extends StatefulWidget {
 }
 
 class MyCustomFormState extends State<MyCustomForm>{
-  //final _formKey = GlobalKey<FormState>();
 
     @override
   Widget build(BuildContext context) {

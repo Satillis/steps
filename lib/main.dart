@@ -60,6 +60,8 @@ class _MainPageState extends State<MainPage>{
 
       _ccal = ((1.15 * Singleton().userWeght * (event.steps - Singleton().satrtSteps) * (Singleton().userHigeht / 4 + 37)) / 10000).toStringAsFixed(2);
 
+      Singleton().userWeght -=  (double.parse(_ccal) / 100);
+
       _steps = (event.steps - Singleton().satrtSteps).toString();
     });
   }
@@ -191,7 +193,7 @@ class _MainPageState extends State<MainPage>{
               
 
               Text(
-                Singleton().userWeght.toString(),
+                Singleton().userWeght.toStringAsFixed(2),
                 style: TextStyle(fontSize: 40),
               ),
                     ],
